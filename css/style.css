@@ -9,6 +9,9 @@
     --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     --main-transition: 0.3s;
 }
+
+/* Typography */
+
 html{
     font-size: 62.5%;
 }
@@ -47,4 +50,26 @@ p{
     h3{
         font-size: 2.4rem;
     }
+}
+
+/* Links */
+a{
+    text-decoration: none;
+    transition: var(--main-transition);
+}
+.link-arrow{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--color-accent);
+}
+.link-arrow::after{
+    content: '-->';
+    margin-left: 0.5rem;
+    transition: var(--main-transition);
+}
+.link-arrow:hover::after{
+    content: '-->';
+    margin-left: 1rem;
+    
 }

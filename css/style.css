@@ -10,7 +10,11 @@
     --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     --main-transition: 0.3s;
 }
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 10px;
 
+}
 /* Typography */
 
 html{
@@ -123,6 +127,58 @@ a{
     fill: var(--color-primary);
 }
 
+/* Buttons */
+.btn{
+    border-radius: var(--button-border-radius);
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: var(--main-transition);
+    white-space: nowrap;
+}
+.btn--primary{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+.btn--secondary{
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+.btn--accent{
+    background-color: var(--color-accent);
+    color: #fff;
+}
+.btn--primary:hover{
+    background-color: #5fa2f9;
+}
+.btn--secondary:hover{
+    background-color:var(--color-primary);
+}
+.btn--accent:hover{
+    background-color: tomato;
+}
+.btn--outline{
+    background-color: transparent;
+    border: 2px solid var(--color-headings);
+    color: var(--color-headings);
+}
+.btn--outline:hover{
+    background-color: var(--color-headings);
+    color: #fff;
+}
+.btn--block{
+    width: 100%;
+    display:inline-block;
+}
+
+
+
+
 /* Media Queries */
 @media screen and (min-width: 1024px){
     /* Typography */
@@ -147,5 +203,10 @@ a{
 
 .list--block .list__item{
     padding-left: 0;
+}
+
+/* Buttons */
+.btn{
+    font-size: 1.5rem;
 }
 }

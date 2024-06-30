@@ -35,6 +35,7 @@ body {
 h1, h2, h3 {
     color: var(--color-headings);
     margin-bottom: 1rem;
+    line-height: 1.1;
 }
 
 h1 {
@@ -505,8 +506,8 @@ a {
 /* Block  */
 .block {
     --padding-vertical: 6rem;
-    padding: var(--padding-vertical) 2rem;
-    margin-top: 6px;
+    padding: 4rem 2rem var(--padding-vertical);
+    /* margin-top: 6px; */
 }
 
 .block__header {
@@ -596,6 +597,23 @@ a {
     border-bottom: 1px solid #222;
 }
 
+/* Hero  */
+.hero{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+.hero__content{
+  justify-self: center;
+}
+.hero__tagline{
+    font-size: 2rem;
+    color: #b9c3cf;
+    letter-spacing: 1px;
+    margin: 2rem 0 5rem;
+    justify-self: center;
+}
+.hero__image{
+    width: 100%;
+}
 
 /* Media Queries for minimum width 1024px */
 @media screen and (min-width: 1024px) {
@@ -726,9 +744,14 @@ a {
         font-size: 1.6rem;
         max-height: 100vh;
         opacity: 1;
+        border: none;
 
     }
-
+  /* Hero */
+  .hero__content{
+    text-align: left;
+    align-self: center;
+  }
     /* .collapsible__menu {
     transform: rotate(-90deg);
     transition: var(--main-transition);

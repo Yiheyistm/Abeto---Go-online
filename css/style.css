@@ -99,7 +99,10 @@ a {
 .badge--secondary {
     background-color: var(--color-secondary);
 }
-
+.badge--outline{
+    color: var(--color-headings);
+    text-transform: initial;
+}
 .badge--small {
     padding: 0.5rem 1.5rem;
     font-size: 1.6rem;
@@ -311,6 +314,13 @@ a {
 }
 
 /* Plan  */
+.plan{
+    transition: transform var(--main-transition) ease-out;
+}
+.plan:hover{
+    transform: scale(1.05);
+}
+
 .plan__name {
     font-size: 2.4rem;
     color: #fff;
@@ -349,9 +359,15 @@ a {
     width: 40px;
     display: inline-block;
     position: absolute;
-    top: -14px;
+    top: -3px;
     right: 5%;
 
+}
+.plan--popular{
+    transform: scale(1.1);
+}
+.plan--popular:hover{
+    transform: scale(1.15);
 }
 
 .media {
@@ -488,7 +504,7 @@ a {
 .collapsible__chevron,
 .collapsible--expanded .collapsible__menu {
     transform: rotate(-90deg);
-    transition: var(--main-transition);
+    transition: var(--main-transition) ease-out;
 }
 
 .collapsible--expanded .collapsible__chevron,
@@ -538,7 +554,7 @@ a {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1270px;
     margin: 0 auto;
 }
 
@@ -614,6 +630,36 @@ a {
 .hero__image{
     width: 100%;
 }
+/* Domain Block  */
+.block-domain{
+    padding-bottom: 0;
+}
+.block-domain .input-group{
+    margin: 2em auto;
+    max-width: 670px;
+}
+.block-domain__price{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    align-items: center;
+    max-width: 830px;
+    margin: 0 auto;
+
+}
+
+/* Plan Blocks */
+.block-plan .grid{
+ gap: 8rem 4rem;
+}
+.block-plan .card{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 
 /* Media Queries for minimum width 1024px */
 @media screen and (min-width: 1024px) {
@@ -691,7 +737,13 @@ a {
     .grid__1x2 {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    .grid__1x3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .plan__group.grid__1x3{
+        grid-gap: 1rem;
+    }
+   
     /* Callout     */
     .callout .grid__1x2 {
         grid-template-columns: 1fr auto;
@@ -722,7 +774,9 @@ a {
     .grid__1x2 {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    .plan__group.grid__1x3{
+        grid-gap: 4rem;
+    }
     .testimonial .qoute {
         font-size: 2.4rem;
     }
@@ -752,12 +806,7 @@ a {
     text-align: left;
     align-self: center;
   }
-    /* .collapsible__menu {
-    transform: rotate(-90deg);
-    transition: var(--main-transition);
-}
-
-.collapsible--expanded .collapsible__chevron {
-    transform: rotate(0);
-} */
+ .block-domain__price{
+    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+ }
 }

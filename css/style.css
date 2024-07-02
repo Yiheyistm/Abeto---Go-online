@@ -467,6 +467,7 @@ a {
     padding: 2rem;
     color: #fff;
     border-radius: var(--main-border-radius);
+    margin: 2rem 3rem;
 }
 
 .callout--primary {
@@ -495,11 +496,13 @@ a {
 }
 
 .collapsible__heading {
+    color: #fff;
     margin-top: 0;
     font-size: 3rem;
 }
 
 .collapsible__content {
+    color: var(--color-body);
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -703,6 +706,61 @@ a {
     color: var(--color-body);
 }
 
+/* Footer */
+.footer {
+    background-color: #232323;
+}
+
+.footer .grid {
+    gap: 2rem;
+    margin-top: 0;
+
+}
+
+.footer__section {
+    padding: 2rem;
+    border-bottom: 1px solid #393939;
+}
+
+.footer__heading {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer__list {
+    margin-top: 0;
+}
+
+.footer__list a {
+    color: #777;
+    margin-top: 1rem;
+    transition: color var(--main-transition);
+}
+
+.footer__list a:hover {
+    color: #fff;
+}
+
+.footer .list__item {
+    margin: 1rem 0;
+}
+
+.footer__brand {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer__logo {
+    width: 100%;
+    max-width: 230px;
+}
+
+.footer__copyright {
+    color: #fff;
+    opacity: 0.3;
+}
+
+
 /* Media Queries for minimum width 1024px */
 @media screen and (min-width: 1024px) {
 
@@ -804,7 +862,7 @@ a {
 /* Media Queries for minimum width 768px */
 @media screen and (min-width: 768px) {
     .media .media__image {
-        margin-right: 2rem;
+        margin-right: 1rem;
 
     }
 
@@ -822,6 +880,10 @@ a {
 
     .plan__group.grid__1x3 {
         grid-gap: 4rem;
+    }
+
+    .grid__1x5 {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
     .testimonial .qoute {
@@ -866,6 +928,7 @@ a {
     }
 
     /* Showcase */
+
     .showcase .grid {
         grid-template-columns: 50% 50%;
     }
@@ -875,4 +938,42 @@ a {
         max-width: 700px;
         justify-self: end;
     }
+
+    /* Footer */
+    .footer .grid {
+        /* justify-items: center;
+        margin-top: 10rem; */
+    }
+
+    .footer .collapsible__chevron {
+        display: none;
+    }
+
+    .footer__section {
+        border: none;
+    }
+
+    .footer__heading {
+        font-size: 2.1rem;
+    }
+
+    .footer__content {
+        max-height: 100vh;
+        opacity: 1;
+    }
+
+    .footer__brand {
+        order: -1;
+    }
+
+    .footer__copyright {
+        font-size: 1.6rem;
+    }
+
+    .callout {
+        max-width: 1000px;
+        margin: 0 auto;
+        transform: translateY(10rem);
+    }
+
 }

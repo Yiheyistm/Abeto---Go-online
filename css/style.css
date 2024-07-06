@@ -131,7 +131,7 @@ a {
 }
 
 .list--block .list__item {
-    padding-left: 0.5;
+    padding-left: 0.5rem;
     margin-bottom: 1rem;
     font-weight: 500;
 }
@@ -928,6 +928,9 @@ a {
     }
 
     /* Navigation Bar  */
+    .navbar__logo>img {
+        max-width: 160px;
+    }
 
     .navbar__toggler {
         display: none;

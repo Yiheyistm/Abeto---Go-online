@@ -572,6 +572,10 @@ a {
     padding: 0 1rem 1rem;
 }
 
+.navbar__logo>img {
+    max-width: 160px;
+}
+
 .navbar__list {
     margin: 0;
     width: 100%;
@@ -928,9 +932,6 @@ a {
     }
 
     /* Navigation Bar  */
-    .navbar__logo>img {
-        max-width: 160px;
-    }
 
     .navbar__toggler {
         display: none;

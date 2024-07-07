@@ -1,15 +1,15 @@
-# Abeto Go-Online  ![Screenshot](images/icon.png) 
+# Abeto Go-Online  ![Screenshot 1](images/icon.png) 
  Abeto Go online is a front-end design for the webstie hosting platform.
 ## Screenshots
 
 ## Home
-![Screenshot 1](images/home.png)
+![Screenshot 2](images/home.png)
 
 ## Plans
-![Screenshot 2](images/plan.png)
+![Screenshot 3](images/plan.png)
 
 ## Showcases
-![Screenshot 2](images/showcase.png)
+![Screenshot 4](images/showcase.png)
 
  Deploy your website less than 60 seconds.
  Host your website for 9$.
